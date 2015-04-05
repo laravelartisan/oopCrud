@@ -1,11 +1,11 @@
 $(document).ready(function(){
-    if($('#login').click(function(){
+    if($('#signup').click(function(){
 
             var name = $('#name').val();
             var email = $('#email').val();
             var pass = $('#password').val();
-            var sub =$('#login').val();
-            // alert(sub);
+            var sub =$('#signup').val();
+            //alert(sub);
             // exit();
             /*$.post('classes/getValues.php',{
                     name:uname,

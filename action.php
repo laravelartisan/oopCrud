@@ -1,5 +1,6 @@
 <?php
 include'classes/User.php';
+include("classes/resize-class.php");
 
 
 // $key = $_POST['key'];
@@ -13,15 +14,39 @@ $user1 = new User();
 // $pass = $_POST['e'];
 // $user1->create($name,$email,$pass);
 // echo $name; die();
+$option = null;
 
-if(isset($_POST['sub'])){
+if(isset($_POST['signup'])){
 
-			$name = $_POST['s'];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+
+    $height = $_POST['height'];
+    $width  = $_POST['width'];
+    $option = $_POST['option'];
+    $img  = $_FILES['photo']['name'];
+    $image = $_FILES['photo']['tmp_name'];
+//        var_dump($img);
+    echo '<br>';
+//        var_dump($image);die();
+
+    // *** 1) Initialise / load image
+    $resizeObj = new resize($img,$image);
+
+    // *** 2) Resize image (options: exact, portrait, landscape, auto, crop)
+    $resizeObj -> resizeImage($height, $width, $option);
+    $newImage ='image/'.time().'.jpg';
+
+    // *** 3) Save image
+    $resizeObj -> saveImage($newImage, 100);
+
+			/*$name = $_POST['s'];
 			$email = $_POST['t'];
-			$pass = $_POST['e'];
+			$pass = $_POST['e'];*/
 
 			// echo $name; die();
-			$user1->create($name,$email,$pass);
+			$user1->create($name,$email,$pass,$newImage);
 		}
 
 if(isset($_POST['editbtn'])){
@@ -44,7 +69,10 @@ if(isset($_POST['updatebtn'])){
 };
 
 if(isset($_POST['viewProfilebtn'])){
-	$profile = $user1->view_profile($_POST['key']);
+    $key = $_POST['key'];
+    $profile = $user1->show($key);
+
+//	$profile = $user1->view_profile($_POST['key']);
 	include'profile.php';
 
 }

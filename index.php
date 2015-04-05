@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/custom.css"/>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/custom.js"></script>
+<!--    <script src="js/custom.js"></script>-->
     <script>
 
     </script>
@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1>Signup Form</h1>
-                    <form class="form-horizontal" action="#" method="post" role="form" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="action.php" method="post" role="form" enctype="multipart/form-data">
                         <div class="form-group">
                            <label for="name" class="control-label col-xs-2">Name :</label>
                            <div class="col-xs-10">
@@ -87,7 +87,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                            <input class="btn btn-primary pull-left" type="button" value="Submit" name="login" id="login"/>
+                            <input class="btn btn-primary pull-left" type="submit" value="Submit" name="signup" id="signup"/>
                               <!-- <button class="btn btn-primary btn-block" name="login">Submit</button> -->
                             </div>
                         </div>

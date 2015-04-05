@@ -25,10 +25,13 @@
 			<div class="row">
 				<div class="xs-12">
 					<div class="editorPanel">
-						<h1 class="oop-title"><span class='glyphicon glyphicon-user'></span> <?=$profile['uname']?></h1><hr class="style-two">
+<!--						<h1 class="oop-title"><span class='glyphicon glyphicon-user'></span><img src="--><?php //echo $profile['image'] ?><!--" alt="no image" class=" img-circle"/><br> --><?//=$profile['uname']?><!--</h1><hr class="style-two">-->
+                        <h1 class="oop-title"><img src="<?php echo $profile['image'] ?>" alt="no image" class=" img-circle"/> <?=$profile['uname']?></h1><hr class="style-two">
 						 <div class="table-responsive">
-							<?php
-							echo $profile['id']."<br/>".$profile['uname']."<br/>".$profile['uemail']."<br/>".$profile['upass'];
+
+                             <?php
+
+							echo $profile['uname']."<br/>".$profile['uemail'];
 
 							?> 
 						</div> 

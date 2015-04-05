@@ -10,18 +10,19 @@ class User{
 		// var_dump($this->db); die();
 		}
 
-	function create($name,$email,$pass){
-		$myQuery = "INSERT into user VALUES('','$name','$email', '$pass')";
+	function create($name,$email,$pass,$newImage){
+		$myQuery = "INSERT into user VALUES('','$name','$email', '$pass','$newImage')";
 		$res = mysqli_query($this->db,$myQuery);
 		if($res){
-			echo "Successfully Inserted!!";
+//			echo "Successfully Inserted!!";
+            header('Location: read.php');
 		}else{
 			echo "Wrong";
 		}
 	}
 
 	function read(){
-		$myQuery = "SELECT * from user";
+		$myQuery = "SELECT * from user order by id desc ";
 		$res = mysqli_query($this->db,$myQuery);
 		$value=NULL;
 		while ($value = $res->fetch_assoc()) {
@@ -76,12 +77,12 @@ function update($id,$name,$email,$pass){
 	}else echo "Wrong";
 }
 
-function view_profile($id){
+/*function view_profile($id){
 	// echo $id;
 	$myQuery = "SELECT * from user WHERE id=$id";
 	$res = mysqli_query($this->db,$myQuery);
 	return $res->fetch_assoc();
 
-}
+}*/
 
 }

@@ -40,12 +40,12 @@
 									<input class="form-control" type="email" name="email" value="<?php echo $showProfile['uemail']; ?>" placeholder="User E-mail">
 								</div>
 							</div>
-							<div class="form-group">
+							<!--<div class="form-group">
 								<label class="control-label col-sm-2" for="password" name="pass">Password :</label>
 								<div class="col-xs-10">
-									<input class="form-control" type="text" name="pass" value="<?php echo $showProfile['upass']; ?>" placeholder="Password">
+									<input class="form-control" type="text" name="pass" value="<?php /*echo $showProfile['upass']; */?>" placeholder="Password">
 								</div>
-							</div>
+							</div>-->
 							<div class="form-group">
 								<div class="col-xs-offset-2 col-xs-10">
 									<input type="submit" class="btn btn-primary btn-block" name="updatebtn" value="Update" />
