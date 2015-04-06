@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>this is Header div</h1>
+        <h1>Demo of Crud Application including image-resize(IMAGE-RESIZE class) option using Object Oriented PHP.No Validation Included </h1>
     </div>
     
     <div class="container">
@@ -25,6 +25,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h1>Signup Form</h1>
+                        <h2>Each field should be field</h2>
                     <form class="form-horizontal" action="action.php" method="post" role="form" enctype="multipart/form-data">
                         <div class="form-group">
                            <label for="name" class="control-label col-xs-2">Name :</label>

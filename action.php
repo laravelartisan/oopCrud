@@ -22,6 +22,7 @@ if(isset($_POST['signup'])){
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
+
     $height = $_POST['height'];
     $width  = $_POST['width'];
     $option = $_POST['option'];
